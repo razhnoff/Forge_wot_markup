@@ -40,7 +40,7 @@
 
   .tank_turret {
     background: url('../img/turret.webp') no-repeat 10px 20px,
-      url('../img/turret-shadow.webp') no-repeat 10px 0;
+      url('../img/turret-shadow.webp') no-repeat 20px 0;
     height: 547px;
     left: 0;
     margin: auto;
