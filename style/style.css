@@ -175,6 +175,10 @@ body {
   margin: 0;
 }
 
+.toggle .footer {
+  display: none;
+}
+
 .footer {
   bottom: 0;
   position: fixed;
