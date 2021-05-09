@@ -1,0 +1,334 @@
+@import "./bg.css";
+@import "./layout.css";
+@import "./top-panel.css";
+@import "./ico.css";
+@import "./article.css";
+@import "./tank.css";
+
+/*** toggle ***/
+/*** transition ***/
+/*** @tank ***/
+/*** animation ***/
+/*** parallax ***/
+
+:root {
+    --animation-bg: 1600ms;
+}
+
+body {
+    color: #fff;
+    font-family: "Open Sans Condensed", sans-serif;
+    margin: 0;
+    position: relative;
+}
+
+.invisible {
+    flex: 0 1 0;
+    font: 0/0 a;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    cursor: pointer;
+}
+.invisible::before,
+.invisible::after {
+    margin-top: 7px;
+    display: block;
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    color: #fff;
+}
+
+.invisible::before {
+    margin-top: 10px;
+}
+
+.navigation {
+    margin-left: 6vw;
+}
+
+.main-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.main-nav_item {
+    list-style: none;
+    height: calc(100% - 4px);
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+.main-nav_item:first-child {
+    margin-left: 0;
+}
+
+.main-nav_item:last-child {
+    margin-right: 0;
+}
+
+.main-nav_item:nth-child(2) {
+    margin-right: 0;
+}
+
+.main-nav_item:nth-child(4) {
+    margin-left: 0;
+}
+
+.main-nav_item:nth-child(3) {
+    margin-left: 2.8rem;
+    background-image: url(../img/wot_logo_header.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 7px;
+}
+
+@media all and (max-width: 760px) {
+    .main-nav_item {
+        display: none;
+    }
+
+    .main-nav_item:nth-child(3) {
+        display: block;
+    }
+
+    .navigation {
+        margin-left: 8vw;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .navigation {
+        margin-left: 10vw;
+    }
+}
+
+.main-nav_item.active {
+    border-bottom: 4px solid #fff;
+}
+
+.main-nav_link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.play {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    max-width: 80px;
+    margin-left: 40px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+@media all and (max-width: 760px) {
+    .play {
+        display: none;
+    }
+}
+
+.play span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 12px;
+    height: 12px;
+    content: "";
+    background-image: url(../img/xbox_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 3px;
+}
+
+.page-nav {
+    display: none;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.intro {
+    display: none;
+}
+@media all and (min-width: 760px) {
+    .intro {
+        display: flex;
+        align-items: flex-end;
+        flex: 1 1 50%;
+        font-size: 1.5vw;
+        margin: 0;
+        padding: 0 15% 80px;
+        text-align: center;
+    }
+
+    .invisible {
+        display: none;
+    }
+}
+
+.heading {
+    font-size: 36px;
+    line-height: 30px;
+    margin: 0 0 17px 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+@media all and (min-width: 760px) {
+    .heading {
+        font-size: 9vw;
+        line-height: 0.9;
+        margin: 0 0 43px 0;
+    }
+}
+.heading_item {
+    position: relative;
+    z-index: 2;
+}
+.heading_slogan {
+    display: inline-block;
+    font-size: 12px;
+    line-height: normal;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+@media all and (min-width: 760px) {
+    .heading_slogan {
+        font-size: 14px;
+        margin-top: 6px;
+    }
+
+    .footer {
+        display: block;
+    }
+}
+
+.paragraph {
+    margin: 0;
+}
+
+.toggle .footer,
+.footer {
+    /* display: none; */
+    /* opacity: 0; */
+    -webkit-animation: fadeFooter 0.5s ease-in-out;
+}
+
+.toggle .footer {
+    display: none;
+}
+
+@media all and (min-width: 320px) {
+    .footer {
+        display: none;
+    }
+}
+
+@media all and (min-width: 760px) {
+    .footer {
+        -webkit-animation: fadeFooter 0.5s ease-in-out;
+        /* opacity: 1; */
+        /* display: block; */
+    }
+}
+
+@-webkit-keyframes fadeFooter {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    left: 10vw;
+    margin-bottom: 30px;
+}
+
+.footer li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+}
+.footer li:last-child {
+    margin-right: 0;
+}
+
+.footer > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer li > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.fb,
+.twitter,
+.google,
+.vk {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 8px;
+}
+
+.fb {
+    width: 8px;
+    height: 15px;
+    background-image: url(../img/facebook.png);
+}
+
+.twitter {
+    width: 15px;
+    height: 13px;
+    background-image: url(../img/twitter.png);
+}
+
+.google {
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/google+.png);
+}
+
+.vk {
+    width: 9px;
+    height: 11px;
+    background-image: url(../img/vkontakte.png);
+}

@@ -1,42 +1,42 @@
 .top-panel {
-  background: #272727;
-  display: flex;
-  height: 60px;
-  justify-content: space-between;
-  position: absolute;
-  left: 0;
-  right: 0;
+    background: #272727;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 @media all and (min-width: 760px) {
-  .top-panel {
-    background: rgba(0, 0, 0, 0.2);
-    position: fixed;
-    z-index: 1;
-  }
+    .top-panel {
+        background: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        z-index: 1;
+    }
 }
 .top-panel::before {
-  content: '';
-  flex: 1 1 50%;
+    content: "";
+    flex: 1 1 50%;
 }
 .top-panel_action {
-  align-items: center;
-  display: flex;
-  flex: 1 1 50%;
-  justify-content: flex-end;
-  margin-right: 35px;
+    align-items: center;
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: flex-end;
+    margin-right: 35px;
 }
 
 .top-panel_action div span {
-  display: block;
-  background-image: url(../img/search.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+    display: block;
+    background-image: url(../img/search.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
 }
 
 .top-panel_action input {
-  display: none;
+    display: none;
 }
